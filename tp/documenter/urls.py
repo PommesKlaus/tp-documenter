@@ -17,5 +17,7 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^dealing/(?P<id>[a-z0-9-]{36})/', DealingView.as_view(), name='dealing-view'),
+    url(r'^company/$', CompanyView.as_view(), name='company-view'),
+    url(r'^company/(?P<id>\d+)/$', CompanyDetailView.as_view(), name='company-detail-view'),
+    url(r'^dealing/(?P<id>[a-z0-9-]{36})/$', DealingView.as_view(), name='dealing-view'),
 ]
