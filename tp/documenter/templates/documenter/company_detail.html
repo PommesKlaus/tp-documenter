@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load documenter_filter %}
+
+{% block title %}{{ company.shortname }}{% endblock %}
+
+{% block content %}
+
+<div class="col-md-12">
+    <h1>{{ company.name }} ({{ company.shortname }})</h1>
+    <table>
+        <tr>
+            <td>Land</td>
+            <td>{{ company.get_country_display }}</td>
+        </tr>
+        <tr>
+            <td>Gesellschaftstyp</td>
+            <td>{{ company.category }}</td>
+        </tr>
+        <tr>
+            <td>Gültigkeit</td>
+            <td>{{ company.begin|date_or_infinite }} - {{ company.end|date_or_infinite }}</td>
+        </tr>
+    </table>
+    <div id="company_description">
+        RENDER COMPANY-QUESTIONNAIRE WITH DATA IN VUEJS APP
+    </div>
+</div>
+
+{% endblock %}

@@ -6,6 +6,11 @@
 
 <div class="col-md-12">
     <h1>Übersicht über alle Gesellschaften</h1>
+    <ul>
+        {% for c in companies %}
+            <li><a href="{% url 'doc:company-detail-view' id=c.id %}">{{ c.name }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}
