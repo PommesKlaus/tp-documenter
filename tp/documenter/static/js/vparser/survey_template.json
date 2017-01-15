@@ -1,0 +1,31 @@
+{
+	template_version: "1.0",
+	groups: [
+		{
+			title: "Allgemeine Informationen",
+			description: "Bla blub, hier steht allgemeiner Text zur Einleitung der Gruppe",
+			questions: [
+				{
+					id: 1,
+					type: "input",
+					title: "Segment, in dem das Unternehmen tätig ist",
+					comment: "Weiterer Text zur Frage",
+					placeholder: "Bitte kurze Beschreibung eingeben",
+					hint: "Typische Segemente sind z.B...",
+					visible_if: null,
+					data: ""
+				},
+				{
+					id: 2,
+					type: "textarea",
+					title: "Geschichte des Unternehmens",
+					comment: "Historie kann wichtig sein um Gesamtumstände besser beurteilen zu können.",
+					placeholder: "Bitte kurze Beschreibung eingeben",
+					hint: "Z.B. aus allgemeiner Darstellung auf der Homepage?",
+					visible_if: null,
+					data: ""
+				}
+			]
+		}	
+	]
+}

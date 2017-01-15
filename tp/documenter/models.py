@@ -20,7 +20,6 @@ class Company(models.Model):
     name = models.CharField(max_length=255)
     category = models.ForeignKey(CompanyCategory)
     country = models.CharField(max_length=2, choices=ISO31661a2)
-    template_json = models.TextField(default='{}')
     data_json = models.TextField(default='{}')
     begin = models.DateField(default=datetime.date.today())
     end = models.DateField(blank=True, null=True)
